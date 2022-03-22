@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GeldscheinePrüfen"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="328.309" Width="527.465">
     <Grid>
-        
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF3574B8" Offset="0.313"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF154BDB"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="33,73,0,0" TextWrapping="Wrap" Text="Seriennummer: " VerticalAlignment="Top" Height="59" Width="181" IsEnabled="False" TextAlignment="Center" FontSize="24"/>
+        <Button x:Name="Pruf_Knopf" Content="Prüfen" HorizontalAlignment="Left" Margin="131,200,0,0" VerticalAlignment="Top" Width="241" Height="64" FontSize="36" Click="Pruf_Knopf_Click"/>
+        <TextBox x:Name="Eingabe_Box" HorizontalAlignment="Left" Height="37" Margin="219,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261" FontSize="22" KeyDown="Eingabe_Box_KeyDown"/>
+        <TextBox x:Name="Ergebnis_Box" HorizontalAlignment="Left" Height="66" Margin="219,118,0,0" TextWrapping="Wrap" Text="Die Ergebnis:" VerticalAlignment="Top" Width="261" IsEnabled="False"/>
+
     </Grid>
 </Window>
